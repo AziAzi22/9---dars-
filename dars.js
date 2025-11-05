@@ -198,3 +198,100 @@
 
 // 6 - masala
 
+// The main idea is to count all the occurring characters in a string. If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
+// What if the string is empty? Then the result should be empty object literal, {}.
+
+// function count(string) {
+//   // TODO
+//   let object = {}
+//   for(let i = 0; i < string.length; i++){
+//     object[string[i]] ? object[string[i]]++ : object[string[i]] = 1
+//   }
+//   return object;
+// }
+// console.log(count("aba"));
+// console.log(count("ttetxt"));
+
+// 7 - masala
+
+// Given an array (arr) as an argument complete the function countSmileys that should return the total number of smiling faces.
+
+// Rules for a smiling face:
+
+// Each smiley face must contain a valid pair of eyes. Eyes can be marked as : or ;
+// A smiley face can have a nose but it does not have to. Valid characters for a nose are - or ~
+// Every smiling face must have a smiling mouth that should be marked with either ) or D
+// No additional characters are allowed except for those mentioned.
+
+// Valid smiley face examples: :) :D ;-D :~)
+// Invalid smiley faces: ;( :> :} :]
+
+// Example
+// countSmileys([':)', ';(', ';}', ':-D']);       // should return 2;
+// countSmileys([';D', ':-(', ':-)', ';~)']);     // should return 3;
+// countSmileys([';]', ':[', ';*', ':$', ';-D']); // should return 1;
+// Note
+// In case of an empty array return 0. You will not be tested with invalid input (input will always be an array). Order of the face (eyes, nose, mouth) elements will always be the same.
+
+//return the total number of smiling faces in the array
+
+// function countSmileys(arr) {
+//   if(arr.length === 0) return 0
+//   let count = 0
+//   const eyes = [":", ";"];
+//   const noses = ["-", "~"];
+//   const mouths = [")", "D"];
+//   for(const element of arr){
+//     if(
+//       (eyes.includes(element[0]) && mouths.includes(element[1])) ||
+//        (eyes.includes(element[0]) && noses.includes(element[1]) && mouths.includes(element[2]))
+//     ){
+//       count++
+//     }
+//   }
+//   return count;
+// }
+// console.log(countSmileys([':)', ';(', ';}', ':-D']));
+// console.log(countSmileys([';D', ':-(', ':-)', ';~)']));
+// console.log(countSmileys([';]', ':[', ';*', ':$', ';-D']));
+
+// 8 - masala
+
+// Introduction
+// The wave (known as the Mexican wave in the English-speaking world outside North America) is an example of metachronal rhythm achieved in a packed stadium when successive groups of spectators briefly stand, yell, and raise their arms. Immediately upon stretching to full height, the spectator returns to the usual seated position. The result is a wave of standing spectators that travels through the crowd, even though individual spectators never move away from their seats. In many large arenas the crowd is seated in a contiguous circuit all the way around the sport field, and so the wave is able to travel continuously around the arena; in discontiguous seating arrangements, the wave can instead reflect back and forth through the crowd. When the gap in seating is narrow, the wave can sometimes pass through it. Usually only one wave crest will be present at any given time in an arena, although simultaneous, counter-rotating waves have been produced.
+
+// (Wikipedia)
+
+// Task
+// In this simple Kata your task is to create a function that turns a string into a Mexican Wave. You will be passed a string and you must return an array of strings where an uppercase letter is a person standing up.
+
+// Rules
+// 1.  The input string will always consist of lowercase letters and spaces, but may be empty, in which case you must return an empty array. 2.  If the character in the string is whitespace then pass over it as if it was an empty seat
+
+// Examples
+// "hello" => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
+// " s p a c e s " => [ " S p a c e s ", " s P a c e s ", " s p A c e s ", " s p a C e s ", " s p a c E s ", " s p a c e S "]
+// Good luck and enjoy!
+
+// function wave(str) {
+//   // Code here
+//   let result = [];
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] === " ") continue;
+//     let wort = "";
+//     for (let j = 0; j < str.length; j++) {
+//       if (i === j) {
+//         wort += str[j].toUpperCase();
+//       } else {
+//         wort += str[j];
+//       }
+//     }
+//     result.push(wort);
+//   }
+//   return result;
+// }
+// console.log(wave("hello"));
+// console.log(wave(" s p a c e s "));
+
+// 9 - masala 
+
